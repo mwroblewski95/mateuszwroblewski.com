@@ -19,7 +19,9 @@ const Blog = ({ posts, language }) => {
 };
 
 export const getServerSideProps = async ({ locale }) => {
-  const allPosts = getAllPosts(locale);
+  // This line should and does work during development. Because the folder exists, due to the fact that it is currently empty, it is not taken into account during the build and does not exist and therefore throws an error on the server so far manually say that there are no blog posts. When there are entries in the blog, the folder will be included in the builds and will not give an error.
+  // const allPosts = getAllPosts(locale);
+  const allPosts = [];
 
   return {
     props: {
