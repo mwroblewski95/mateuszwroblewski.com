@@ -1,0 +1,19 @@
+.navItem {
+  font-size: 3rem;
+  font-weight: 800;
+  transition: all 0.3s linear;
+}
+
+.active {
+  color: var(--color-black);
+}
+
+@media (min-width: 1000px) {
+  .navItem {
+    font-size: 2rem;
+  }
+
+  .active {
+    color: var(--color-white);
+  }
+}

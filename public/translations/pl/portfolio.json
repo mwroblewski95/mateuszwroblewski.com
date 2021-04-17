@@ -1,0 +1,9 @@
+{
+  "sectionTitle":"Portfolio",
+  "linkText":"Czytaj więcej",
+  "noProjects":"Obecnie w portfolio nie ma jeszcze żadnych projektów.",
+  "somethingWrong":"Ups, coś poszło nie tak. Projekty nie mogły zostać pobrane. Proszę wrócić później.",
+  "imageAlt":"obrazek podglądowy projektu",
+  "github":"Repozytorium na GitHubie",
+  "liveSite":"Zobacz projekt"
+}

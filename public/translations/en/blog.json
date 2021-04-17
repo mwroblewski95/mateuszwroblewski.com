@@ -1,0 +1,8 @@
+{
+  "noPosts":"There are currently no posts on the blog yet.",
+  "somethingWrong":"Oops, something went wrong. The posts could not be downloaded. Please come back later.",
+  "published":"Published:",
+  "readMore":"Read More",
+  "createdBy":"Written by: Mateusz Wroblewski",
+  "descriptionBlog":"My name is Mateusz Wróblewski and I'm Frontend Web Developer. I blog and write about technologies such as React, JavaScript, CSS, HTML."
+}

@@ -1,0 +1,9 @@
+{
+  "sectionTitle":"Portfolio",
+  "linkText":"Read more",
+  "noProjects":"There are currently no projects in the portfolio yet.",
+  "somethingWrong":"Oops, something went wrong. The projects could not be downloaded. Please come back later.",
+  "imageAlt":"project preview image",
+  "github":"Repository on GitHub",
+  "liveSite":"View project"
+}

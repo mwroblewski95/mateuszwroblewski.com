@@ -1,0 +1,24 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.field {
+  padding: 0.5rem;
+}
+
+.errorMessage {
+  color: var(--color-red);
+  min-height: 2rem;
+  font-size: 1.4rem;
+}
+
+.buttonSubmitForm {
+  background-color: var(--color-black);
+  margin: 1rem 0;
+}
+
+.sendFormStatus {
+  min-height: 1.8rem;
+}

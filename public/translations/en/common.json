@@ -1,0 +1,16 @@
+{
+  "description":"My name is Mateusz Wróblewski and I'm Frontend Web Developer. In my projects I use such technologies as React, JavaScript, CSS, HTML.",
+  "brandAlt":"Logo programming",
+  "openMenu":"Open Menu",
+  "closeMenu":"Close Menu",
+  "home": "Home",
+  "about": "About Me",
+  "skills": "Skills",
+  "portfolio": "Portfolio",
+  "contact": "Contact",
+  "blog": "Blog",
+  "changeLanguage":"Change Language",
+  "footer": "Mateusz Wróblewski. All rights reserved.",
+  "notFoundText":"This page could not be found.",
+  "notFoundLink":"Go back to home page"
+}

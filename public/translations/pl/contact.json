@@ -1,0 +1,12 @@
+{
+  "sectionTitle":"Kontakt",
+  "contactFormHeading":"Skontaktuj się ze mną",
+  "email":"Twój adres email:",
+  "invalidEmail":"Nieprawidłowy adres e-mail",
+  "message":"Twoja wiadomość:",
+  "required":"To pole jest wymagane.",
+  "formSubmitButtonText":"Wyślij wiadomość",
+  "formSent":"Twoja wiadomość została poprawnie wysłana.",
+  "formError":"Ups, coś poszło nie tak. Wiadomość nie została wysłana.",
+  "socialMedia":"Znajdź mnie w mediach społecznościowych"
+}

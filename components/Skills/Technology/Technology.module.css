@@ -1,0 +1,10 @@
+.technology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.technologyName {
+  margin-top: 1rem;
+  text-align: center;
+}

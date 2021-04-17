@@ -1,65 +1,71 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useState, useEffect, useRef } from 'react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { scroller } from 'react-scroll';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { getAllProjects } from '../lib/projects-utility';
+import Home from '../components/Home/Home';
+import About from '../components/About/About';
+import Skills from '../components/Skills/Skills';
+import Portfolio from '../components/Portfolio/ProjectList/ProjectList';
+import Contact from '../components/Contact/Contact';
 
-export default function Home() {
+const HomePage = ({ projects }) => {
+  gsap.registerPlugin(ScrollTrigger);
+  const sectionsRef = useRef();
+  const [aboutSectionNode, setAboutSectionNode] = useState(null);
+
+  useEffect(() => {
+    const sectionToScroll = localStorage.getItem('scrollToSection');
+    if (sectionToScroll) {
+      scroller.scrollTo(sectionToScroll, {
+        duration: 400,
+        smooth: true,
+      });
+      localStorage.removeItem('scrollToSection');
+    }
+
+    const sectionNodes = sectionsRef.current.children;
+    for (const section of sectionNodes) {
+      gsap.fromTo(
+        section.children,
+        { y: '+=100', opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.2,
+          duration: 1,
+          ease: 'easeInOut',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 50%',
+          },
+        },
+      );
+    }
+  }, []);
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+    <>
+      <Home aboutSectionNode={aboutSectionNode} />
+      <main ref={sectionsRef}>
+        <About setAboutSectionNode={setAboutSectionNode} />
+        <Skills />
+        <Portfolio projects={projects} />
+        <Contact />
       </main>
+    </>
+  );
+};
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+export const getServerSideProps = async ({ locale }) => {
+  const allProjects = getAllProjects(locale);
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'home', 'about', 'skills', 'portfolio', 'contact'])),
+      projects: allProjects,
+    },
+  };
+};
+export default HomePage;

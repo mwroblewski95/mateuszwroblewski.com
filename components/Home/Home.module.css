@@ -1,0 +1,41 @@
+.home {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.developerImage {
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin: 3rem 0;
+}
+
+@media (min-width: 700px) {
+  .heading {
+    font-size: 4rem;
+  }
+
+  .developerImage {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .developerImage {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .developerImage {
+    width: 33%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .developerImage {
+    width: 70%;
+  }
+}

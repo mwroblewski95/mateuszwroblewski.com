@@ -1,0 +1,15 @@
+.socialMediaIconsList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.socialMediaIcon {
+  font-size: 3rem;
+}
+
+@media (min-width: 750px) {
+  .socialMediaIcon {
+    font-size: 4.5rem;
+  }
+}

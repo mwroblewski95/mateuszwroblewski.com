@@ -1,0 +1,21 @@
+.contact {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.contactContainer {
+  display: grid;
+}
+
+@media (min-width: 700px) {
+  .contactContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10rem;
+  }
+}
+
+@media (min-height: 1000px) {
+  .contact {
+    min-height: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sectionTitle":"Contact",
+  "contactFormHeading":"Reach me by sending a message",
+  "email":"Your email address:",
+  "invalidEmail":"Invalid email address",
+  "message":"Your message:",
+  "required":"This field is required.",
+  "formSubmitButtonText":"Send a message",
+  "formSent":"Your message has been successfully sent.",
+  "formError":"Oops, something went wrong. The message has not been sent.",
+  "socialMedia":"Find me on social media"
+}

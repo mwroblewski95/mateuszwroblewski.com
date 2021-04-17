@@ -1,0 +1,11 @@
+.projectHeader {
+  min-height: 0;
+}
+.projectLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectLink {
+  margin-bottom: 1rem;
+}

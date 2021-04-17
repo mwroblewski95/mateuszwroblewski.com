@@ -1,0 +1,16 @@
+{
+  "description":"Nazywam się Mateusz Wróblewski i jestem Frontend Web Developerem. W moich projektach używam takie technologie jak React, JavaScript, CSS, HTML.",
+  "brandAlt":"Logo programowanie",
+  "openMenu":"Otwórz Menu",
+  "closeMenu":"Zamknij Menu",
+  "home": "Strona Główna",
+  "about": "O mnie",
+  "skills": "Umiejętności",
+  "portfolio": "Portfolio",
+  "contact": "Kontakt",
+  "blog": "Blog",
+  "changeLanguage":"Zmień język",
+  "footer": "Mateusz Wróblewski. Wszelkie prawa zastrzeżone.",
+  "notFoundText":"Nie można odnaleźć tej strony.",
+  "notFoundLink":"Powrót do strony głównej"
+}

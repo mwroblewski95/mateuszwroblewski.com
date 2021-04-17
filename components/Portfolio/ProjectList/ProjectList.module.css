@@ -1,0 +1,21 @@
+.portfolio {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.projects {
+  display: grid;
+}
+
+@media (min-height: 1000px) {
+  .portfolio {
+    min-height: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+  }
+}

@@ -1,0 +1,9 @@
+.brand {
+  color: var(--color-white);
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.logo {
+  margin-right: 0.5rem;
+}

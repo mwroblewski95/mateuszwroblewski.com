@@ -1,0 +1,39 @@
+.skills {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.technologiesGroupHeading {
+  color: var(--color-white);
+}
+
+.technologiesGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.5rem;
+}
+
+@media (min-height: 1000px) {
+  .skills {
+    min-height: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  .technologiesGroup {
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .technologiesGroup {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .technologiesGroup {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
