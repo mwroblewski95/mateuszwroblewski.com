@@ -44,30 +44,32 @@ const ContactForm = () => {
           );
         }}
       >
-        <Form ref={formNodeRef}>
-          <div className={styles.inputGroup}>
-            <label htmlFor="email" className={styles.inputLabel}>
-              {t('email')}
-            </label>
-            <Field name="email" id="email" type="email" className={styles.field} />
-            <div className={styles.errorMessage}>
-              <ErrorMessage name="email" />
+        {({ isSubmitting }) => (
+          <Form ref={formNodeRef}>
+            <div className={styles.inputGroup}>
+              <label htmlFor="email" className={styles.inputLabel}>
+                {t('email')}
+              </label>
+              <Field name="email" id="email" type="email" className={styles.field} />
+              <div className={styles.errorMessage}>
+                <ErrorMessage name="email" />
+              </div>
             </div>
-          </div>
-          <div className={styles.inputGroup}>
-            <label htmlFor="message" className={styles.inputLabel}>
-              {t('message')}
-            </label>
-            <Field name="message" id="message" as="textarea" rows="10" className={styles.field} />
-            <div className={styles.errorMessage}>
-              <ErrorMessage name="message" />
+            <div className={styles.inputGroup}>
+              <label htmlFor="message" className={styles.inputLabel}>
+                {t('message')}
+              </label>
+              <Field name="message" id="message" as="textarea" rows="10" className={styles.field} />
+              <div className={styles.errorMessage}>
+                <ErrorMessage name="message" />
+              </div>
             </div>
-          </div>
-          <button type="submit" className={styles.buttonSubmitForm}>
-            {t('formSubmitButtonText')} &rarr;
-          </button>
-          <p className={styles.sendFormStatus}>{sendFormStatus}</p>
-        </Form>
+            <button disabled={isSubmitting} type="submit" className={styles.buttonSubmitForm}>
+              {t('formSubmitButtonText')} &rarr;
+            </button>
+            <p className={styles.sendFormStatus}>{sendFormStatus}</p>
+          </Form>
+        )}
       </Formik>
     </div>
   );
