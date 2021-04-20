@@ -6,7 +6,7 @@ module.exports = {
     emailJSServiceId: 'contact_service',
     emailJSTemplateId: 'contact_form',
     emailJSUserId: 'user_5vLqtX0q5t7BA5c2m6vdW',
-    reactGaId: 'G-53RMMLXPLV',
+    googleAnalyticsId: 'G-53RMMLXPLV',
   },
   webpack: (config, { isServer }) => {
     // Fixes npm packages that depend on `fs` module

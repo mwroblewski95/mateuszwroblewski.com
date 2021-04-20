@@ -1,17 +1,10 @@
 import Head from 'next/head';
 import { appWithTranslation, useTranslation } from 'next-i18next';
-import { useEffect } from 'react';
-import ReactGA from 'react-ga';
 import Layout from '../components/Layout/Layout';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }) => {
   const { t } = useTranslation('common');
-
-  useEffect(() => {
-    ReactGA.initialize(process.env.reactGaId);
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
 
   return (
     <Layout>
