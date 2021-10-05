@@ -87,7 +87,8 @@ p,
 label,
 input,
 textarea,
-figcaption {
+figcaption,
+li {
   font-size: 1.3rem;
 }
 
@@ -102,7 +103,8 @@ figcaption {
 }
 
 .imageMarkdown {
-  padding: 2rem 0 !important;
+  padding: 2rem 1.5rem !important;
+
 }
 
 /* Media queries */
@@ -111,7 +113,8 @@ figcaption {
   label,
   input,
   textarea,
-  figcaption {
+  figcaption,
+  li {
     font-size: 1.6rem;
   }
 
@@ -132,7 +135,8 @@ figcaption {
   label,
   input,
   textarea,
-  figcaption {
+  figcaption,
+  li {
     font-size: 1.8rem;
   }
 }

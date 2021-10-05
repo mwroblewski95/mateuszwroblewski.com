@@ -7,8 +7,10 @@ const ProjectHeader = ({ name, description, image, linkGithub, linkLive }) => {
   return (
     <header className={styles.projectHeader}>
       <h2>{name}</h2>
+      <div className={styles.projectPreviewImage}>
+        <Image src={image} alt={`${name} ${t('imageAlt')}`} width={711} height={400} />
+      </div>
       <p>{description}</p>
-      <Image src={image} alt={`${name} ${t('imageAlt')}`} width={400} height={400} />
       <div className={styles.projectLinks}>
         <a href={linkGithub} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
           {t('github')} &rarr;

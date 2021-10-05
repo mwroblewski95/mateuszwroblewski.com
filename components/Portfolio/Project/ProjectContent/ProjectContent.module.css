@@ -1,3 +1,28 @@
 .project {
   min-height: 100vh;
 }
+
+.project h2 {
+  font-size: 2.25rem;
+}
+
+
+
+.project h3 {
+  color:var(--color-red);
+  margin: 0 0 1.5rem 0;
+}
+
+.project p {
+ margin-bottom: 1.5rem;
+}
+
+.project ul {
+  margin-bottom: 1.5rem;
+ }
+
+ 
+
+
+
+

@@ -7,7 +7,7 @@ const ProjectItem = ({ image, name, description, to }) => {
 
   return (
     <li className={styles.project}>
-      <Image src={image} alt={`${name} ${t('imageAlt')}`} width={300} height={300} />
+      <Image src={image} alt={`${name} ${t('imageAlt')}`} width={366} height={206} />
       <h3 className={styles.projectName}>{name}</h3>
       <p className={styles.projectDescription}>{description}</p>
       <Link href={to}>
