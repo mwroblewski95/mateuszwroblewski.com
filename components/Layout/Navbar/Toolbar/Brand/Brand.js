@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from './Brand.module.css';
 
 const Brand = () => {
@@ -17,7 +17,7 @@ const Brand = () => {
   return (
     <a onClick={brandHandler} href="#" className={styles.brand}>
       <span className={styles.logo}>
-        <Image src="/images/favicon.svg" alt={t('brandAlt')} width="40px" height="40px" />
+        <Image src="/images/favicon.svg" alt={t('brandAlt')} width="40" height="40" />
       </span>
       <span>
         Mateusz

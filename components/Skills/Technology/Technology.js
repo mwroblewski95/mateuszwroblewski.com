@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from './Technology.module.css';
 const Technology = ({ name, image }) => {
   return (

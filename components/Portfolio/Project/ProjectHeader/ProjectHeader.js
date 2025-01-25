@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from './ProjectHeader.module.css';
 const ProjectHeader = ({ name, description, image, linkGithub, linkLive }) => {
   const { t } = useTranslation('portfolio');

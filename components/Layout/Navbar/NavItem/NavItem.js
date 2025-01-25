@@ -18,14 +18,14 @@ const NavigationItem = ({ children, to, type, locale, blog, portfolio }) => {
   if (type === 'scroll') {
     navItem = (
       // The empty href attribute in LinkScroll must be, because without it these links are impossible to navigate by keyboard to them.
-      <LinkScroll onClick={closeMenu} to={to} smooth={true} duration={400} offset={-60} spy={true} activeClass={styles.active} className={styles.navItem} href="">
+      (<LinkScroll onClick={closeMenu} to={to} smooth={true} duration={400} offset={-60} spy={true} activeClass={styles.active} className={styles.navItem} href="" legacyBehavior>
         {children}
-      </LinkScroll>
+      </LinkScroll>)
     );
 
     if (router.pathname.includes('/portfolio') || router.pathname.includes('/blog')) {
       navItem = (
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <a onClick={() => changePageAndScroll(to)} className={`${styles.navItem} ${router.pathname.includes('/portfolio') && portfolio ? styles.active : null}`}>
             {children}
           </a>
@@ -36,7 +36,7 @@ const NavigationItem = ({ children, to, type, locale, blog, portfolio }) => {
 
   if (type === 'navigate') {
     navItem = (
-      <Link href={to} locale={locale}>
+      <Link href={to} locale={locale} legacyBehavior>
         <a onClick={closeMenu} className={`${styles.navItem} ${router.pathname.includes('/blog') && blog ? styles.active : null}`}>
           {children}
         </a>

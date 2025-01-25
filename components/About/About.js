@@ -1,6 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from './About.module.css';
 const About = ({ setAboutSectionNode }) => {
   const { t } = useTranslation('about');
